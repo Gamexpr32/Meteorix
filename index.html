@@ -388,6 +388,386 @@ body[data-theme='light'] .ct-grid { stroke: rgba(0,0,0,0.1); }
 
 #worldMapInner { width:100%; height:100%; min-height:320px; border-radius:16px; }
 
+  /* ============================================= */
+/* ========== RESPONSIVE MOBILE STYLES ========= */
+/* ============================================= */
+
+/* Tablet & Mobile Base Styles */
+@media (max-width:900px){
+    .span-12,.span-9,.span-8,.span-7,.span-6,.span-5,.span-4,.span-3{grid-column:span 12}
+    .grid-home{gap:22px}
+    .card-home{padding:22px}
+    .searchbar input{flex-basis:100%}
+    nav { display: none; }
+}
+
+/* Mobile Specific Styles */
+@media (max-width:768px) {
+    :root {
+        --gap: 14px;
+        --home-gap: 18px;
+        --home-card-pad: 18px;
+        --home-section-gap: 16px;
+    }
+    
+    body {
+        font-size: 15px;
+    }
+    
+    /* Header Adjustments */
+    header {
+        margin: 16px auto 8px;
+        padding: 0 16px;
+        flex-wrap: wrap;
+    }
+    
+    .brand h1 {
+        font-size: 16px;
+    }
+    
+    .logo {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .header-actions {
+        margin-left: auto;
+    }
+    
+    /* Container Padding */
+    .container {
+        padding: 0 16px;
+        margin: 16px auto 32px;
+    }
+    
+    /* Card Adjustments */
+    .card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+    
+    .card-home {
+        padding: 16px;
+    }
+    
+    h2 {
+        font-size: 22px;
+        margin-bottom: 6px;
+    }
+    
+    h3 {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    /* Search Bar Mobile Optimization */
+    .searchbar {
+        flex-direction: column;
+        padding: 12px;
+        gap: 8px;
+    }
+    
+    .searchbar input {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .searchbar .suffix {
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .searchbar .suffix .btn {
+        width: 100%;
+    }
+    
+    .chip {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+    
+    /* Button Adjustments */
+    .btn {
+        padding: 10px 14px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+    
+    .social-btn {
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+    
+    /* Grid Layouts */
+    .grid, .grid-home {
+        gap: 14px;
+    }
+    
+    /* Climate Stats Grid */
+    .climate-stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 8px;
+    }
+    
+    .climate-stats-grid > div {
+        padding: 12px 8px;
+    }
+    
+    .climate-stats-grid .stat-value {
+        font-size: 18px;
+    }
+    
+    /* Species Card */
+    .species-header {
+        padding: 16px;
+    }
+    
+    .species-header h4 {
+        font-size: 18px;
+    }
+    
+    .species-card .card-content {
+        padding: 16px;
+    }
+    
+    /* Info Boxes */
+    .info-box {
+        padding: 12px;
+    }
+    
+    .info-box h5 {
+        font-size: 13px;
+    }
+    
+    .info-box p, .info-box ul {
+        font-size: 13px;
+    }
+    
+    /* Chat Interface */
+    #chat-window {
+        min-height: 300px;
+        height: 40vh;
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    .chat-message {
+        padding: 8px 12px;
+        font-size: 14px;
+        max-width: 90%;
+    }
+    
+    .bot-avatar {
+        font-size: 18px;
+    }
+    
+    #chat-input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .chat-prompt-btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    
+    /* Map Containers */
+    .earth-wrap, #habitatMap, #simulation-map {
+        height: 300px;
+        min-height: 300px;
+    }
+    
+    /* FAB Menu - Always Visible on Mobile */
+    .fab-container {
+        display: flex !important;
+        bottom: 16px;
+        right: 16px;
+    }
+    
+    #fab-toggle {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+    
+    .fab-menu-item a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    /* Form Groups */
+    .form-group label {
+        font-size: 13px;
+    }
+    
+    .form-group input, .form-group select {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    /* Forecast Grid */
+    #forecastContent {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        gap: 8px;
+    }
+    
+    /* Current Weather Grid */
+    #currentWeatherContent {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 8px;
+    }
+    
+    /* Chart Containers */
+    canvas {
+        max-height: 280px !important;
+    }
+    
+    /* GIBS Controls */
+    .gibs-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .gibs-controls .control-group {
+        width: 100%;
+    }
+    
+    /* Dividers */
+    .divider {
+        margin: 10px 0 12px;
+    }
+    
+    /* Sign In Card */
+    .signin-card {
+        grid-column: span 12 !important;
+        margin: 16px auto;
+    }
+    
+    /* Simulation Details */
+    #simulation-details {
+        margin-top: 16px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width:480px) {
+    :root {
+        --gap: 12px;
+        --home-gap: 14px;
+        --home-card-pad: 14px;
+    }
+    
+    header {
+        padding: 0 12px;
+    }
+    
+    .container {
+        padding: 0 12px;
+    }
+    
+    .card {
+        padding: 12px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    h3 {
+        font-size: 15px;
+    }
+    
+    .searchbar {
+        padding: 10px;
+    }
+    
+    .btn {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    /* Climate Stats - Stack Vertically */
+    .climate-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Chat Window Smaller */
+    #chat-window {
+        height: 35vh;
+        min-height: 250px;
+    }
+    
+    /* Forecast Items - 2 Columns Max */
+    #forecastContent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Map Heights Reduced */
+    .earth-wrap, #habitatMap, #simulation-map {
+        height: 250px;
+        min-height: 250px;
+    }
+    
+    #fab-toggle {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+    }
+    
+    /* Reduce Animation Complexity on Low-End Devices */
+    * {
+        animation-duration: 0.2s !important;
+        transition-duration: 0.15s !important;
+    }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-width:900px) and (orientation: landscape) {
+    #chat-window {
+        height: 50vh;
+    }
+    
+    .earth-wrap, #habitatMap, #simulation-map {
+        height: 60vh;
+    }
+}
+
+/* Hide FAB on Desktop */
+@media (min-width: 901px) {
+    .fab-container { display: none; }
+}
+
+/* Touch Optimization */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch targets */
+    .btn, a, button, input[type="checkbox"], input[type="radio"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .searchbar input {
+        padding: 12px;
+    }
+    
+    /* Prevent text selection on repeated taps */
+    * {
+        -webkit-tap-highlight-color: rgba(102, 227, 196, 0.2);
+        -webkit-touch-callout: none;
+    }
+    
+    /* Better scroll momentum */
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
 #habitatMap {
     height: 400px;
     width: 100%;
